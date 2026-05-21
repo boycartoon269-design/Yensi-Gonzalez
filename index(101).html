@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta ><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Yensi Gonzalez | Luxury Weston Real Estate</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;700&family=Italiana&family=DM+Serif+Display:ital@0;1&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root{--brand:#1a6b3c;--brand-dark:#1a6b3c;--brand-gradient:linear-gradient(135deg,#1a6b3c 0%,#1a6b3c 100%);--bg:#F5F4F0;--text-base:#1a1a2e;--text-muted:#4b5563;--text-heading:#0a0a14;--surface-card:rgba(255,255,255,0.9);--surface-soft:rgba(0,0,0,0.03);}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text-base);font-family:'Inter',sans-serif;overflow-x:hidden;}
+h1,h2,h3,h4,h5,h6{color:var(--text-heading);font-family:'Playfair Display',serif;}
+p{color:var(--text-base);}li{color:var(--text-base);}strong{color:var(--text-heading);}small{color:var(--text-muted);}label{color:var(--text-muted);}a{color:inherit;}
+.text-gradient{background:var(--brand-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.card{background:rgba(255,255,255,0.92);border:1px solid rgba(0,0,0,0.08);backdrop-filter:blur(12px);border-radius:16px;color:var(--text-base);}
+.card-elevated{background:rgba(255,255,255,0.97);border:1px solid rgba(0,0,0,0.08);border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,0.08);color:var(--text-base);}
+.reveal{opacity:0;transform:translateY(28px);transition:all 0.8s cubic-bezier(0.16,1,0.3,1);}.reveal.active{opacity:1;transform:translateY(0);}
+::-webkit-scrollbar{width:6px;}::-webkit-scrollbar-track{background:var(--bg);}::-webkit-scrollbar-thumb{background:var(--brand);border-radius:4px;}
+.typing-dot{width:5px;height:5px;background:var(--brand);border-radius:50%;display:inline-block;animation:bounce 1.2s infinite;}.typing-dot:nth-child(2){animation-delay:.2s}.typing-dot:nth-child(3){animation-delay:.4s}
+@keyframes bounce{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-5px)}}
+.nav-link{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);text-decoration:none;transition:color .2s;}.nav-link:hover{color:var(--brand);}
+.section-label{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--brand);display:block;margin-bottom:12px;}
+.divider{width:48px;height:2px;background:var(--brand-gradient);border-radius:2px;margin-top:16px;}
+.stat-card{background:rgba(255,255,255,0.9);border:1px solid rgba(0,0,0,0.07);border-radius:12px;padding:20px 24px;}
+.stat-card .stat-num{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--text-heading)!important;}
+.stat-card .stat-unit{color:var(--brand);}
+.stat-card .stat-label{font-family:'Montserrat',sans-serif;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted)!important;margin-top:4px;}
+.feature-icon{width:44px;height:44px;border-radius:12px;background:rgba(0,0,0,0.06);display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
+.property-card{background:#ffffff;border:1px solid rgba(0,0,0,0.07);border-radius:16px;overflow:hidden;transition:transform .4s,box-shadow .4s;}.property-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,0,0,0.12);}
+.mobile-menu-btn{display:none;width:44px;height:44px;border:none;border-radius:12px;background:var(--brand-gradient);color:#fff;align-items:center;justify-content:center;font-size:18px;cursor:pointer;flex-shrink:0;}
+.mobile-nav{display:none!important;position:absolute;top:100%;left:0;width:100%;padding-top:12px;z-index:9999;}.mobile-nav.show{display:block!important;animation:mobileIn .25s ease;}
+.mobile-nav-inner{background:#fff;border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:16px;box-shadow:0 12px 40px rgba(0,0,0,0.15);margin:0 12px;}
+.mobile-nav-inner a{text-decoration:none;font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;color:var(--text-heading);letter-spacing:.05em;padding:4px 0;border-bottom:1px solid rgba(0,0,0,0.06);}
+.mobile-nav-inner a:last-child{border-bottom:none;}
+@keyframes mobileIn{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+.neighborhoods-grid{display:grid;grid-template-columns:7fr 5fr;grid-template-rows:240px 240px;gap:20px;}.neighborhood-main{grid-row:span 2;}
+.props-filter-wrap{display:flex;gap:8px;flex-wrap:wrap;}
+.props-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+.search-bar-wrap{max-width:820px;margin:0 auto 32px;}
+.search-tabs{display:flex;gap:4px;justify-content:center;margin-bottom:16px;flex-wrap:wrap;}
+.search-tab{padding:8px 24px;border-radius:999px;border:1.5px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.08);color:#fff;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:.08em;cursor:pointer;backdrop-filter:blur(8px);transition:all .25s cubic-bezier(.34,1.56,.64,1);}
+.search-tab:hover{border-color:rgba(255,255,255,0.45);background:rgba(255,255,255,0.15);}
+.search-tab.active{background:var(--brand-gradient);border-color:var(--brand);}
+.search-box{display:flex;align-items:stretch;background:rgba(255,255,255,0.97);border-radius:20px;padding:8px;box-shadow:0 24px 64px rgba(0,0,0,0.4),inset 0 1px 0 rgba(255,255,255,0.95);}
+.search-field{display:flex;align-items:center;gap:12px;padding:10px 20px;flex:1;min-width:0;border-right:1px solid rgba(0,0,0,0.08);}
+.search-field:last-of-type{border-right:none;}
+.search-field-icon{color:var(--brand);font-size:16px;flex-shrink:0;}
+.search-field-inner{display:flex;flex-direction:column;min-width:0;flex:1;}
+.search-field-label{font-family:'Montserrat',sans-serif;font-size:9px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#aaa;margin-bottom:3px;white-space:nowrap;}
+.search-field input,.search-field select{border:none;outline:none;font-family:'Inter',sans-serif;font-size:14px;font-weight:500;color:#111;background:transparent;width:100%;}
+.search-btn{flex-shrink:0;padding:0 28px;border-radius:14px;background:var(--brand-gradient);border:none;color:#fff;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:800;letter-spacing:.1em;cursor:pointer;display:flex;align-items:center;gap:8px;min-height:48px;transition:all .25s;}
+.search-btn:hover{transform:translateY(-2px) scale(1.02);}
+.why-grid{display:grid!important;grid-template-columns:repeat(4,1fr)!important;gap:24px!important;}
+.footer-grid{display:grid!important;grid-template-columns:2fr 1fr 1fr 2fr!important;gap:40px!important;}
+/* Language hidden classes */
+.lang-en,[data-lang="en"]{display:none;}.lang-es,[data-lang="es"]{display:none;}
+html[lang="en"] .lang-en,html[lang="en"] [data-lang="en"]{display:revert;}
+html[lang="es"] .lang-es,html[lang="es"] [data-lang="es"]{display:revert;}
+@media(max-width:1024px){
+  .desktop-nav,.desktop-call,.desktop-lang{display:none!important;}.mobile-menu-btn{display:flex!important;}
+  #about>div{grid-template-columns:1fr!important;}.why-grid{grid-template-columns:repeat(2,1fr)!important;}
+  .footer-grid{grid-template-columns:1fr 1fr!important;gap:28px!important;}
+  .neighborhoods-grid{grid-template-columns:1fr 1fr!important;grid-template-rows:200px 200px!important;gap:16px!important;}.neighborhood-main{grid-row:span 1!important;}
+  .props-grid{grid-template-columns:repeat(2,1fr)!important;gap:20px!important;}.team-grid{grid-template-columns:repeat(2,1fr)!important;gap:20px!important;}
+}
+@media(max-width:768px){
+  section{padding:56px 16px!important;}h1{font-size:clamp(1.9rem,9vw,2.6rem)!important;}h2{font-size:clamp(1.5rem,7vw,2rem)!important;}
+  .neighborhoods-grid{display:flex!important;flex-direction:column!important;gap:14px!important;}.neighborhood-main{height:260px!important;}.neighborhood-item{height:180px!important;}
+  .props-filter-wrap{display:flex!important;flex-wrap:nowrap!important;overflow-x:auto!important;gap:8px!important;padding-bottom:6px!important;-webkit-overflow-scrolling:touch!important;scrollbar-width:none!important;}.props-filter-wrap::-webkit-scrollbar{display:none!important;}.props-filter-wrap button{flex-shrink:0!important;white-space:nowrap!important;}
+  .props-grid{grid-template-columns:1fr!important;gap:20px!important;}.team-grid{grid-template-columns:1fr!important;gap:24px!important;}
+  .why-grid{grid-template-columns:1fr!important;}.footer-grid{grid-template-columns:1fr!important;gap:24px!important;}
+  #contact>div{grid-template-columns:1fr!important;}.stat-grid{grid-template-columns:1fr!important;}
+  #hero{min-height:100svh!important;}#hero>div:last-child{padding-top:clamp(80px,20vw,120px)!important;padding-bottom:48px!important;}
+  .search-box{flex-direction:column;border-radius:22px;padding:8px;}.search-field{width:100%;border-right:none;border-bottom:1px solid rgba(0,0,0,0.08);padding:12px 14px;min-height:74px;}.search-field:last-of-type{border-bottom:none;}.search-btn{width:100%;margin-top:10px;border-radius:16px;padding:15px;justify-content:center;}
+}
+@media(max-width:480px){.neighborhood-main{height:220px!important;}.neighborhood-item{height:160px!important;}.stat-card{padding:16px!important;}.stat-card .stat-num{font-size:22px!important;}}
+
+#about img,
+.about-image img{
+  width:100% !important;
+  max-width:420px !important;
+  height:auto !important;
+  object-fit:contain !important;
+  margin:auto;
+  display:block;
+}
+
+</style>
+</head>
+<body>
+
+<header style="position:fixed;top:0;left:0;width:100%;z-index:50;padding:16px 0;" id="main-header">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px;">
+    <div class="header-wrap" style="background:rgba(255,255,255,0.9);border:1px solid rgba(0,0,0,0.08);backdrop-filter:blur(20px);border-radius:999px;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;position:relative;box-shadow:0 4px 24px rgba(0,0,0,0.08);">
+
+      <!-- Logo -->
+      <div style="display:flex;align-items:center;gap:10px;"><span style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--text-heading);">Yensi <span style="color:var(--brand);">Gonzalez</span></span></div>
+
+      <!-- Desktop Nav with bilingual labels -->
+      <nav class="desktop-nav" style="display:flex;gap:24px;">
+        <a href="#about" class="nav-link"><span data-lang="en">About</span><span data-lang="es">Nosotros</span></a>
+        <a href="#neighborhoods" class="nav-link"><span data-lang="en">Neighborhoods</span><span data-lang="es">Vecindarios</span></a>
+        <a href="#properties" class="nav-link"><span data-lang="en">Properties</span><span data-lang="es">Propiedades</span></a>
+        <a href="#team" class="nav-link"><span data-lang="en">Team</span><span data-lang="es">Equipo</span></a>
+        <a href="#contact" class="nav-link"><span data-lang="en">Contact</span><span data-lang="es">Contacto</span></a>
+      </nav>
+
+      <!-- Call Button -->
+      <a class="desktop-call" href="tel:1234567890" style="display:flex;align-items:center;gap:8px;padding:8px 18px;border-radius:999px;border:1.5px solid var(--brand);font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--brand);text-decoration:none;transition:all .2s;" onmouseover="this.style.background='var(--brand)';this.style.color='#fff';" onmouseout="this.style.background='transparent';this.style.color='var(--brand)';"><i class="fa-solid fa-phone" style="font-size:10px;"></i>123-456-7890</a>
+
+      <!-- EN/ES Toggle Button (desktop) -->
+      <div class="desktop-lang">
+<button id="lang-toggle-btn" onclick="toggleSiteLang()" style="
+  padding:8px 18px;border-radius:999px;background:rgba(255,255,255,0.08);backdrop-filter:blur(8px);
+  border:1.5px solid var(--brand);
+  background:transparent;
+  color:var(--brand);
+  font-family:'Montserrat',sans-serif;
+  font-size:10px;font-weight:700;letter-spacing:.08em;
+  cursor:pointer;flex-shrink:0;
+  transition:all .2s;
+  display:flex;align-items:center;gap:6px;
+" onmouseover="this.style.background='var(--brand)';this.style.color='#fff';" onmouseout="this.style.background='transparent';this.style.color='var(--brand)';">
+  <i class="fa-solid fa-language" style="font-size:12px;"></i>
+  <span id="lang-label">🇪🇸 ES</span>
+</button></div>
+
+      <!-- Mobile Hamburger -->
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()"><i class="fa-solid fa-bars"></i></button>
+
+      <!-- Mobile Nav -->
+      <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-inner">
+          <a href="#about" onclick="toggleMobileMenu()"><i class="fa-solid fa-user" style="margin-right:10px;color:var(--brand);font-size:12px;"></i><span data-lang="en">About</span><span data-lang="es">Nosotros</span></a>
+          <a href="#neighborhoods" onclick="toggleMobileMenu()"><i class="fa-solid fa-map-location-dot" style="margin-right:10px;color:var(--brand);font-size:12px;"></i><span data-lang="en">Neighborhoods</span><span data-lang="es">Vecindarios</span></a>
+          <a href="#properties" onclick="toggleMobileMenu()"><i class="fa-solid fa-building" style="margin-right:10px;color:var(--brand);font-size:12px;"></i><span data-lang="en">Properties</span><span data-lang="es">Propiedades</span></a>
+          <a href="#team" onclick="toggleMobileMenu()"><i class="fa-solid fa-people-group" style="margin-right:10px;color:var(--brand);font-size:12px;"></i><span data-lang="en">Team</span><span data-lang="es">Equipo</span></a>
+          <a href="#contact" onclick="toggleMobileMenu()"><i class="fa-solid fa-envelope" style="margin-right:10px;color:var(--brand);font-size:12px;"></i><span data-lang="en">Contact</span><span data-lang="es">Contacto</span></a>
+          <a href="tel:1234567890" style="background:var(--brand-gradient);color:#fff!important;padding:10px 16px;border-radius:10px;text-align:center;"><i class="fa-solid fa-phone" style="margin-right:8px;font-size:12px;"></i>123-456-7890</a>
+          
+<button onclick="toggleSiteLang()" style="background:transparent;border:1.5px solid var(--brand);color:var(--brand);padding:10px 16px;border-radius:10px;text-align:center;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;">
+  🇪🇸 <span class="lang-toggle-text">Español</span>
+</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section style="position:relative;width:100%;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#000;" id="hero">
+  <div style="position:absolute;inset:0;z-index:0;overflow:hidden;opacity:0.45;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;transform:scale(1.1);" src="https://www.youtube.com/embed/iJb8P2fD15E?autoplay=1&mute=1&controls=0&loop=1&playlist=iJb8P2fD15E&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1" allow="autoplay;encrypted-media" frameborder="0"></iframe></div>
+  <div style="position:absolute;inset:0;z-index:1;background:linear-gradient(to top,#0a0a0b 0%,rgba(0,0,0,0.55) 50%,rgba(0,0,0,0.2) 100%);"></div>
+  <div style="position:relative;z-index:2;text-align:center;padding:100px 24px 40px;max-width:900px;margin:0 auto;width:100%;">
+    <span style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:.35em;text-transform:uppercase;color:var(--brand);display:block;margin-bottom:20px;">
+      <span data-lang="en">Exclusive Estate Gateway</span><span data-lang="es">Acceso Exclusivo a Propiedades</span>
+    </span>
+    <h1 style="font-family:'Playfair Display',serif;font-size:clamp(2.5rem,6vw,4.5rem);color:#ffffff;line-height:1.1;margin-bottom:20px;">
+      <em style="background:var(--brand-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">
+        <span data-lang="en">Yensi Gonzalez</span><span data-lang="es">Yensi Gonzalez</span>
+      </em>
+    </h1>
+    <p style="font-family:'Inter',sans-serif;font-size:16px;color:rgba(255,255,255,0.75);max-width:560px;margin:0 auto 40px;font-weight:300;line-height:1.7;">
+      <span data-lang="en">We connect discerning buyers and sellers with the finest luxury properties in Weston. Your dream home is closer than you think.</span>
+      <span data-lang="es">Conectamos a compradores y vendedores exigentes con las mejores propiedades de lujo en Weston. Tu hogar ideal está más cerca de lo que crees.</span>
+    </p>
+    <div class="search-bar-wrap">
+      <div class="search-tabs">
+        <button onclick="setSearchTab(this)" class="search-tab active"><span data-lang="en">Buy</span><span data-lang="es">Comprar</span></button>
+        <button onclick="setSearchTab(this)" class="search-tab"><span data-lang="en">Rent</span><span data-lang="es">Rentar</span></button>
+        <button onclick="setSearchTab(this)" class="search-tab"><span data-lang="en">Sell</span><span data-lang="es">Vender</span></button>
+      </div>
+      <div class="search-box">
+        <div class="search-field">
+          <i class="fa-solid fa-location-dot search-field-icon"></i>
+          <div class="search-field-inner">
+            <p class="search-field-label"><span data-lang="en">Location</span><span data-lang="es">Ubicación</span></p>
+            <input type="text" placeholder="Weston City, Neighborhood…">
+          </div>
+        </div>
+        <div class="search-field">
+          <i class="fa-solid fa-building search-field-icon"></i>
+          <div class="search-field-inner">
+            <p class="search-field-label"><span data-lang="en">Type</span><span data-lang="es">Tipo</span></p>
+            <select>
+              <option><span data-lang="en">Any Type</span></option>
+              <option>House / Casa</option><option>Apartment / Apartamento</option><option>Villa</option>
+            </select>
+          </div>
+        </div>
+        <div class="search-field">
+          <i class="fa-solid fa-tag search-field-icon"></i>
+          <div class="search-field-inner">
+            <p class="search-field-label"><span data-lang="en">Price Range</span><span data-lang="es">Precio</span></p>
+            <select>
+              <option>Any Price</option>
+              <option>Under $200K</option><option>$200K – $500K</option><option>$500K – $1M</option><option>$1M+</option>
+            </select>
+          </div>
+        </div>
+        <button onclick="alert('Search coming soon!')" class="search-btn">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <span data-lang="en">Search</span><span data-lang="es">Buscar</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" style="padding:100px 24px;background:#ffffff;">
+  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
+    <div class="reveal">
+      <span class="section-label"><span data-lang="en">Our Story</span><span data-lang="es">Nuestra Historia</span></span>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,2.8rem);line-height:1.2;margin-bottom:20px;">
+        <span data-lang="en">Defining Weston Luxury Since Day One</span>
+        <span data-lang="es">Definiendo el Lujo en Weston Desde el Primer Día</span>
+      </h2>
+      <p style="font-size:15px;line-height:1.8;color:var(--text-muted);margin-bottom:16px;">
+        <span data-lang="en">We built Yensi Gonzalez on a simple belief: every client deserves exclusive access, honest guidance, and results that speak for themselves.</span>
+        <span data-lang="es">Fundamos Yensi Gonzalez con una convicción simple: cada cliente merece acceso exclusivo, orientación honesta y resultados que hablan por sí solos.</span>
+      </p>
+      <p style="font-size:15px;line-height:1.8;color:var(--text-muted);margin-bottom:36px;">
+        <span data-lang="en">Our team brings together deep local knowledge, a curated network of off-market properties, and a full-service approach that takes the stress out of buying or selling in Weston.</span>
+        <span data-lang="es">Nuestro equipo combina un profundo conocimiento local, una red exclusiva de propiedades fuera del mercado y un enfoque integral que elimina el estrés de comprar o vender en Weston.</span>
+      </p>
+      <div class="stat-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
+        <div class="stat-card"><div class="stat-num"><span data-target="2.4">0</span><span class="stat-unit">B+</span></div><div class="stat-label"><span data-lang="en">Portfolio Volume</span><span data-lang="es">Volumen</span></div></div>
+        <div class="stat-card"><div class="stat-num"><span data-target="150">0</span><span class="stat-unit">+</span></div><div class="stat-label"><span data-lang="en">Exclusive Listings</span><span data-lang="es">Listados</span></div></div>
+        <div class="stat-card"><div class="stat-num"><span data-target="99">0</span><span class="stat-unit">%</span></div><div class="stat-label"><span data-lang="en">Client Retention</span><span data-lang="es">Retención</span></div></div>
+      </div>
+    </div>
+    <div class="reveal" style="transition-delay:.2s;">
+      <div style="border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.12);position:relative;">
+        <img decoding="async" src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop" alt="Luxury Estate" style="width:100%;height:480px;object-fit:cover;display:block;">
+        <div style="position:absolute;bottom:24px;left:24px;right:24px;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);border-radius:12px;padding:16px 20px;border:1px solid rgba(0,0,0,0.08);">
+          <p style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brand);margin-bottom:4px;"><span data-lang="en">Currently Available</span><span data-lang="es">Disponible Ahora</span></p>
+          <p style="font-size:14px;font-weight:600;color:var(--text-heading);"><span data-lang="en">Premium estates in Weston</span><span data-lang="es">Propiedades premium en Weston</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEIGHBORHOODS -->
+<section id="neighborhoods" style="padding:100px 24px;background:var(--bg);">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div class="reveal" style="text-align:center;margin-bottom:60px;">
+      <span class="section-label" style="text-align:center;"><span data-lang="en">Prime Markets</span><span data-lang="es">Mercados Principales</span></span>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,2.8rem);"><span data-lang="en">Weston's Most Exclusive Neighborhoods</span><span data-lang="es">Los Vecindarios Más Exclusivos de Weston</span></h2>
+      <div class="divider" style="margin:16px auto 0;"></div>
+    </div>
+    <div class="neighborhoods-grid">
+      <div class="reveal neighborhood-main" style="border-radius:20px;overflow:hidden;position:relative;box-shadow:0 8px 32px rgba(0,0,0,0.1);"><img decoding="async" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&h=450&fit=crop" alt="Neighborhood 1" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"><div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.75) 0%,transparent 60%);"></div><div style="position:absolute;bottom:24px;left:24px;right:24px;"><span style="display:inline-block;background:var(--brand-gradient);color:#fff;font-family:'Montserrat',sans-serif;font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border-radius:999px;margin-bottom:8px;"><span data-lang="en">Premier Zone</span><span data-lang="es">Zona Premier</span></span><h3 style="font-family:'Playfair Display',serif;font-size:22px;color:#fff;margin-bottom:6px;">Sharyland Elite District</h3><p style="font-size:13px;color:rgba(255,255,255,0.75);line-height:1.5;"><span data-lang="en">Private acreage estates with gated security and striking architectural design.</span><span data-lang="es">Fincas privadas con seguridad de acceso controlado y diseño arquitectónico impresionante.</span></p></div></div>
+      <div class="reveal neighborhood-item" style="border-radius:20px;overflow:hidden;position:relative;box-shadow:0 8px 32px rgba(0,0,0,0.1);transition-delay:.15s;"><img decoding="async" src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&h=450&fit=crop" alt="Neighborhood 2" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"><div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.7) 0%,transparent 60%);"></div><div style="position:absolute;bottom:20px;left:20px;right:20px;"><h3 style="font-family:'Playfair Display',serif;font-size:18px;color:#fff;margin-bottom:4px;">Bentsen Reserve Estates</h3><p style="font-size:12px;color:rgba(255,255,255,0.7);"><span data-lang="en">Luxury living with resort-style amenities.</span><span data-lang="es">Vida de lujo con amenidades estilo resort.</span></p></div></div>
+      <div class="reveal neighborhood-item" style="border-radius:20px;overflow:hidden;position:relative;box-shadow:0 8px 32px rgba(0,0,0,0.1);transition-delay:.3s;"><img decoding="async" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=450&fit=crop" alt="Neighborhood 3" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"><div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.7) 0%,transparent 60%);"></div><div style="position:absolute;bottom:20px;left:20px;right:20px;"><h3 style="font-family:'Playfair Display',serif;font-size:18px;color:#fff;margin-bottom:4px;">Tres Lagos Sanctuaries</h3><p style="font-size:12px;color:rgba(255,255,255,0.7);"><span data-lang="en">Lakefront smart homes redefining modern living.</span><span data-lang="es">Casas inteligentes frente al lago que redefinen la vida moderna.</span></p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROPERTIES -->
+<section id="properties" style="padding:100px 24px;background:#ffffff;">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div class="reveal" style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:52px;flex-wrap:wrap;gap:20px;">
+      <div>
+        <span class="section-label"><span data-lang="en">Featured Listings</span><span data-lang="es">Listados Destacados</span></span>
+        <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,2.8rem);"><span data-lang="en">Signature Properties</span><span data-lang="es">Propiedades Exclusivas</span></h2>
+      </div>
+      <div class="props-filter-wrap">
+        <button onclick="filterProps(this,'all')" style="padding:8px 18px;border-radius:999px;border:1.5px solid var(--brand);background:var(--brand-gradient);color:#fff;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .2s;" data-filter="all"><span data-lang="en">All</span><span data-lang="es">Todo</span></button><button onclick="filterProps(this,'estates')" style="padding:8px 18px;border-radius:999px;border:1.5px solid rgba(0,0,0,0.08);background:transparent;color:var(--text-muted);font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .2s;" data-filter="estates"><span data-lang="en">Estates</span><span data-lang="es">Fincas</span></button><button onclick="filterProps(this,'mansions')" style="padding:8px 18px;border-radius:999px;border:1.5px solid rgba(0,0,0,0.08);background:transparent;color:var(--text-muted);font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .2s;" data-filter="mansions"><span data-lang="en">Mansions</span><span data-lang="es">Mansiones</span></button><button onclick="filterProps(this,'villas')" style="padding:8px 18px;border-radius:999px;border:1.5px solid rgba(0,0,0,0.08);background:transparent;color:var(--text-muted);font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .2s;" data-filter="villas"><span data-lang="en">Villas</span><span data-lang="es">Villas</span></button>
+      </div>
+    </div>
+    <div class="props-grid" id="props-grid">
+      <div class="property-card reveal" data-cat="estate" style="transition-delay:0s;">
+          <div style="position:relative;overflow:hidden;aspect-ratio:4/3;">
+            <span style="position:absolute;top:14px;left:14px;z-index:2;background:var(--brand-gradient);color:#fff;font-family:'Montserrat',sans-serif;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:6px;"><span data-lang="en">For Sale</span><span data-lang="es">En Venta</span></span>
+            <img decoding="async" src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&h=450&fit=crop" alt="The Luminary Estate" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s;" onmouseover="this.style.transform='scale(1.07)'" onmouseout="this.style.transform='scale(1)'">
+          </div>
+          <div style="padding:22px 24px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+              <span style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;color:var(--brand);letter-spacing:.05em;"><i class="fa-solid fa-location-dot" style="margin-right:4px;"></i>Sharyland Enclaves</span>
+              <span style="font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--text-heading);">$3,850,000</span>
+            </div>
+            <h3 style="font-family:'Playfair Display',serif;font-size:19px;margin-bottom:16px;"><span data-lang="en">The Luminary Estate</span><span data-lang="es">La Finca Luminaria</span></h3>
+            <div style="display:flex;align-items:center;justify-content:space-between;padding-top:16px;border-top:1px solid rgba(0,0,0,0.08);">
+              <div style="display:flex;gap:12px;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;color:var(--text-muted);letter-spacing:.05em;flex-wrap:wrap;">
+                <span><i class="fa-solid fa-bed" style="color:var(--brand);margin-right:4px;"></i>5 <span data-lang="en">Beds</span><span data-lang="es">Hab</span></span>
+                <span><i class="fa-solid fa-bath" style="color:var(--brand);margin-right:4px;"></i>5 <span data-lang="en">Baths</span><span data-lang="es">Baños</span></span>
+                <span><i class="fa-solid fa-ruler-combined" style="color:var(--brand);margin-right:4px;"></i>6,000 sqft</span>
+              </div>
+              <button style="background:var(--brand-gradient);color:#fff;border:none;padding:7px 14px;border-radius:8px;font-family:'Montserrat',sans-serif;font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;flex-shrink:0;"><span data-lang="en">Details</span><span data-lang="es">Detalles</span></button>
+            </div>
+          </div>
+        </div><div class="property-card reveal" data-cat="mansion" style="transition-delay:0.15s;">
+          <div style="position:relative;overflow:hidden;aspect-ratio:4/3;">
+            <span style="position:absolute;top:14px;left:14px;z-index:2;background:var(--brand-gradient);color:#fff;font-family:'Montserrat',sans-serif;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:6px;"><span data-lang="en">New Listing</span><span data-lang="es">Nuevo Listado</span></span>
+            <img decoding="async" src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&h=450&fit=crop" alt="The Obsidian Mansion" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s;" onmouseover="this.style.transform='scale(1.07)'" onmouseout="this.style.transform='scale(1)'">
+          </div>
+          <div style="padding:22px 24px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+              <span style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;color:var(--brand);letter-spacing:.05em;"><i class="fa-solid fa-location-dot" style="margin-right:4px;"></i>Tres Lagos</span>
+              <span style="font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--text-heading);">$5,200,000</span>
+            </div>
+            <h3 style="font-family:'Playfair Display',serif;font-size:19px;margin-bottom:16px;"><span data-lang="en">The Obsidian Mansion</span><span data-lang="es">La Mansión Obsidiana</span></h3>
+            <div style="display:flex;align-items:center;justify-content:space-between;padding-top:16px;border-top:1px solid rgba(0,0,0,0.08);">
+              <div style="display:flex;gap:12px;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;color:var(--text-muted);letter-spacing:.05em;flex-wrap:wrap;">
+                <span><i class="fa-solid fa-bed" style="color:var(--brand);margin-right:4px;"></i>6 <span data-lang="en">Beds</span><span data-lang="es">Hab</span></span>
+                <span><i class="fa-solid fa-bath" style="color:var(--brand);margin-right:4px;"></i>6 <span data-lang="en">Baths</span><span data-lang="es">Baños</span></span>
+                <span><i class="fa-solid fa-ruler-combined" style="color:var(--brand);margin-right:4px;"></i>6,500 sqft</span>
+              </div>
+              <button style="background:var(--brand-gradient);color:#fff;border:none;padding:7px 14px;border-radius:8px;font-family:'Montserrat',sans-serif;font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;flex-shrink:0;"><span data-lang="en">Details</span><span data-lang="es">Detalles</span></button>
+            </div>
+          </div>
+        </div><div class="property-card reveal" data-cat="villa" style="transition-delay:0.3s;">
+          <div style="position:relative;overflow:hidden;aspect-ratio:4/3;">
+            <span style="position:absolute;top:14px;left:14px;z-index:2;background:var(--brand-gradient);color:#fff;font-family:'Montserrat',sans-serif;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:6px;"><span data-lang="en">Private Listing</span><span data-lang="es">Listado Privado</span></span>
+            <img decoding="async" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=450&fit=crop" alt="The Sanctuary Villa" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s;" onmouseover="this.style.transform='scale(1.07)'" onmouseout="this.style.transform='scale(1)'">
+          </div>
+          <div style="padding:22px 24px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+              <span style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;color:var(--brand);letter-spacing:.05em;"><i class="fa-solid fa-location-dot" style="margin-right:4px;"></i>Bentsen Reserve</span>
+              <span style="font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--text-heading);">$2,950,000</span>
+            </div>
+            <h3 style="font-family:'Playfair Display',serif;font-size:19px;margin-bottom:16px;"><span data-lang="en">The Sanctuary Villa</span><span data-lang="es">La Villa Santuario</span></h3>
+            <div style="display:flex;align-items:center;justify-content:space-between;padding-top:16px;border-top:1px solid rgba(0,0,0,0.08);">
+              <div style="display:flex;gap:12px;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;color:var(--text-muted);letter-spacing:.05em;flex-wrap:wrap;">
+                <span><i class="fa-solid fa-bed" style="color:var(--brand);margin-right:4px;"></i>7 <span data-lang="en">Beds</span><span data-lang="es">Hab</span></span>
+                <span><i class="fa-solid fa-bath" style="color:var(--brand);margin-right:4px;"></i>7 <span data-lang="en">Baths</span><span data-lang="es">Baños</span></span>
+                <span><i class="fa-solid fa-ruler-combined" style="color:var(--brand);margin-right:4px;"></i>7,000 sqft</span>
+              </div>
+              <button style="background:var(--brand-gradient);color:#fff;border:none;padding:7px 14px;border-radius:8px;font-family:'Montserrat',sans-serif;font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;flex-shrink:0;"><span data-lang="en">Details</span><span data-lang="es">Detalles</span></button>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section style="padding:100px 24px;background:var(--bg);">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div class="reveal" style="text-align:center;margin-bottom:60px;">
+      <span class="section-label" style="text-align:center;"><span data-lang="en">Why Choose Us</span><span data-lang="es">¿Por Qué Elegirnos?</span></span>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,2.8rem);"><span data-lang="en">The Gonzalez Difference</span><span data-lang="es">La Diferencia Gonzalez</span></h2>
+      <div class="divider" style="margin:16px auto 0;"></div>
+    </div>
+    <div class="why-grid">
+      
+        <div class="card-elevated reveal" style="padding:28px;transition-delay:0s;">
+          <div class="feature-icon"><i class="fa-solid fa-lock" style="color:var(--brand);font-size:16px;"></i></div>
+          <h3 style="font-family:'Playfair Display',serif;font-size:18px;margin-bottom:10px;"><span data-lang="en">Complete Privacy</span><span data-lang="es">Privacidad Total</span></h3>
+          <p style="font-size:13px;line-height:1.7;color:var(--text-muted);"><span data-lang="en">Your transactions stay confidential from start to finish.</span><span data-lang="es">Sus transacciones permanecen confidenciales de principio a fin.</span></p>
+        </div>
+        <div class="card-elevated reveal" style="padding:28px;transition-delay:0.1s;">
+          <div class="feature-icon"><i class="fa-solid fa-chart-line" style="color:var(--brand);font-size:16px;"></i></div>
+          <h3 style="font-family:'Playfair Display',serif;font-size:18px;margin-bottom:10px;"><span data-lang="en">Data-Driven Pricing</span><span data-lang="es">Precios Basados en Datos</span></h3>
+          <p style="font-size:13px;line-height:1.7;color:var(--text-muted);"><span data-lang="en">Real-time analytics and proprietary models price every property accurately.</span><span data-lang="es">Análisis en tiempo real para precisar el valor de cada propiedad.</span></p>
+        </div>
+        <div class="card-elevated reveal" style="padding:28px;transition-delay:0.2s;">
+          <div class="feature-icon"><i class="fa-solid fa-key" style="color:var(--brand);font-size:16px;"></i></div>
+          <h3 style="font-family:'Playfair Display',serif;font-size:18px;margin-bottom:10px;"><span data-lang="en">Off-Market Access</span><span data-lang="es">Acceso Fuera del Mercado</span></h3>
+          <p style="font-size:13px;line-height:1.7;color:var(--text-muted);"><span data-lang="en">Our private network gives you early access to listings never on the public market.</span><span data-lang="es">Nuestra red privada le da acceso anticipado a propiedades exclusivas.</span></p>
+        </div>
+        <div class="card-elevated reveal" style="padding:28px;transition-delay:0.30000000000000004s;">
+          <div class="feature-icon"><i class="fa-solid fa-star" style="color:var(--brand);font-size:16px;"></i></div>
+          <h3 style="font-family:'Playfair Display',serif;font-size:18px;margin-bottom:10px;"><span data-lang="en">Full-Service Concierge</span><span data-lang="es">Servicio Concierge Completo</span></h3>
+          <p style="font-size:13px;line-height:1.7;color:var(--text-muted);"><span data-lang="en">From staging to legal coordination, we handle every detail for you.</span><span data-lang="es">Desde el staging hasta la coordinación legal, manejamos cada detalle.</span></p>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team" style="padding:100px 24px;background:#ffffff;">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div class="reveal" style="text-align:center;margin-bottom:60px;">
+      <span class="section-label" style="text-align:center;"><span data-lang="en">Our Team</span><span data-lang="es">Nuestro Equipo</span></span>
+      <h2 style="font-size:clamp(2rem,3.5vw,2.8rem);"><span data-lang="en">Meet the Experts</span><span data-lang="es">Conoce a los Expertos</span></h2>
+      <div class="divider" style="margin:16px auto 0;"></div>
+    </div>
+    <div class="team-grid">
+      
+        <div class="card-elevated reveal" style="overflow:hidden;transition-delay:0s;">
+          <div style="position:relative;overflow:hidden;aspect-ratio:3/4;">
+            <img decoding="async" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80" alt="Yensi Gonzalez" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .6s;filter:grayscale(10%);" onmouseover="this.style.transform='scale(1.05)';this.style.filter='none';" onmouseout="this.style.transform='scale(1)';this.style.filter='grayscale(10%)'">
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.6) 0%,transparent 55%);"></div>
+            <div style="position:absolute;bottom:20px;left:20px;right:20px;">
+              <h3 style="font-size:18px;color:#fff;margin-bottom:4px;">Yensi Gonzalez</h3>
+              <p style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brand);">Principal Broker</p>
+            </div>
+          </div>
+          <div style="padding:16px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;">
+            <span style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#003087;padding:4px 10px;border-radius:20px;border:1.5px solid #00308722;background:#00308711;"><i class="fa-solid fa-building-columns" style="font-size:8px;margin-right:4px;"></i>Coldwell Banker</span>
+            <div style="display:flex;gap:12px;">
+              <a href="#" target="_blank" style="color:var(--text-muted);text-decoration:none;font-size:14px;transition:color .2s;" onmouseover="this.style.color='var(--brand)'" onmouseout="this.style.color='var(--text-muted)'"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" target="_blank" style="color:var(--text-muted);text-decoration:none;font-size:14px;transition:color .2s;" onmouseover="this.style.color='var(--brand)'" onmouseout="this.style.color='var(--text-muted)'"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="card-elevated reveal" style="overflow:hidden;transition-delay:0.15s;">
+          <div style="position:relative;overflow:hidden;aspect-ratio:3/4;">
+            <img decoding="async" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="VP of Acquisitions / Adquisiciones" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .6s;filter:grayscale(10%);" onmouseover="this.style.transform='scale(1.05)';this.style.filter='none';" onmouseout="this.style.transform='scale(1)';this.style.filter='grayscale(10%)'">
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.6) 0%,transparent 55%);"></div>
+            <div style="position:absolute;bottom:20px;left:20px;right:20px;">
+              <h3 style="font-size:18px;color:#fff;margin-bottom:4px;">VP of Acquisitions / Adquisiciones</h3>
+              <p style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brand);">Licensed Advisor</p>
+            </div>
+          </div>
+          <div style="padding:16px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;">
+            <span style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#003087;padding:4px 10px;border-radius:20px;border:1.5px solid #00308722;background:#00308711;"><i class="fa-solid fa-building-columns" style="font-size:8px;margin-right:4px;"></i>Coldwell Banker</span>
+            <div style="display:flex;gap:12px;">
+              <a href="#" target="_blank" style="color:var(--text-muted);text-decoration:none;font-size:14px;transition:color .2s;" onmouseover="this.style.color='var(--brand)'" onmouseout="this.style.color='var(--text-muted)'"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" target="_blank" style="color:var(--text-muted);text-decoration:none;font-size:14px;transition:color .2s;" onmouseover="this.style.color='var(--brand)'" onmouseout="this.style.color='var(--text-muted)'"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="card-elevated reveal" style="overflow:hidden;transition-delay:0.3s;">
+          <div style="position:relative;overflow:hidden;aspect-ratio:3/4;">
+            <img decoding="async" src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80" alt="Director of Assets / Activos" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .6s;filter:grayscale(10%);" onmouseover="this.style.transform='scale(1.05)';this.style.filter='none';" onmouseout="this.style.transform='scale(1)';this.style.filter='grayscale(10%)'">
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.6) 0%,transparent 55%);"></div>
+            <div style="position:absolute;bottom:20px;left:20px;right:20px;">
+              <h3 style="font-size:18px;color:#fff;margin-bottom:4px;">Director of Assets / Activos</h3>
+              <p style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brand);">Senior Agent</p>
+            </div>
+          </div>
+          <div style="padding:16px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;">
+            <span style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#003087;padding:4px 10px;border-radius:20px;border:1.5px solid #00308722;background:#00308711;"><i class="fa-solid fa-building-columns" style="font-size:8px;margin-right:4px;"></i>Coldwell Banker</span>
+            <div style="display:flex;gap:12px;">
+              <a href="#" target="_blank" style="color:var(--text-muted);text-decoration:none;font-size:14px;transition:color .2s;" onmouseover="this.style.color='var(--brand)'" onmouseout="this.style.color='var(--text-muted)'"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" target="_blank" style="color:var(--text-muted);text-decoration:none;font-size:14px;transition:color .2s;" onmouseover="this.style.color='var(--brand)'" onmouseout="this.style.color='var(--text-muted)'"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section style="padding:100px 24px;background:var(--bg);">
+  <div style="max-width:800px;margin:0 auto;text-align:center;">
+    <div class="reveal">
+      <span class="section-label" style="text-align:center;"><span data-lang="en">Client Stories</span><span data-lang="es">Historias de Clientes</span></span>
+      <div style="font-size:48px;color:var(--brand);opacity:0.2;margin-bottom:20px;"><i class="fa-solid fa-quote-right"></i></div>
+    </div>
+    <div style="position:relative;min-height:200px;">
+      <div class="testimonial-slide reveal" style="padding:0 20px;">
+        <p style="font-family:'Playfair Display',serif;font-size:clamp(1rem,2.2vw,1.3rem);line-height:1.7;color:var(--text-heading);font-style:italic;margin-bottom:32px;">
+          <span data-lang="en">"Working with Yensi Gonzalez was unlike anything we had experienced before. They found us an off-market property in Sharyland before it ever hit the listings."</span>
+          <span data-lang="es">"Trabajar con Yensi Gonzalez fue una experiencia única. Encontraron una propiedad fuera del mercado en Sharyland antes de que llegara a los listados públicos."</span>
+        </p>
+        <div style="display:flex;align-items:center;justify-content:center;gap:14px;">
+          <div style="width:44px;height:44px;border-radius:50%;background:var(--brand-gradient);display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;color:#fff;">HR</div>
+          <div style="text-align:left;"><p style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-heading);">Harrison Reynolds</p><p style="font-size:12px;color:var(--text-muted);">Managing Director, Reynolds Capital Group</p></div>
+        </div>
+      </div>
+      <div class="testimonial-slide" style="display:none;padding:0 20px;">
+        <p style="font-family:'Playfair Display',serif;font-size:clamp(1rem,2.2vw,1.3rem);line-height:1.7;color:var(--text-heading);font-style:italic;margin-bottom:32px;">
+          <span data-lang="en">"I have bought and sold properties across three states, and this team is simply in a different league."</span>
+          <span data-lang="es">"He comprado y vendido propiedades en tres estados, y este equipo está simplemente en una liga diferente."</span>
+        </p>
+        <div style="display:flex;align-items:center;justify-content:center;gap:14px;">
+          <div style="width:44px;height:44px;border-radius:50%;background:var(--brand-gradient);display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;color:#fff;">AC</div>
+          <div style="text-align:left;"><p style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-heading);">Dr. Alessandra Cavazos</p><p style="font-size:12px;color:var(--text-muted);">Chief Neurosurgeon, South Texas Health System</p></div>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:center;gap:8px;margin-top:32px;">
+      <button onclick="prevSlide()" style="width:36px;height:36px;border-radius:50%;border:1.5px solid rgba(0,0,0,0.08);background:transparent;color:var(--text-muted);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;" onmouseover="this.style.borderColor='var(--brand)';this.style.color='var(--brand)'" onmouseout="this.style.borderColor='rgba(0,0,0,0.08)';this.style.color='var(--text-muted)'"><i class="fa-solid fa-chevron-left" style="font-size:10px;"></i></button>
+      <span id="t-dot-0" style="width:24px;height:4px;border-radius:2px;background:var(--brand);cursor:pointer;" onclick="goSlide(0)"></span>
+      <span id="t-dot-1" style="width:8px;height:4px;border-radius:2px;background:rgba(0,0,0,0.08);cursor:pointer;" onclick="goSlide(1)"></span>
+      <button onclick="nextSlide()" style="width:36px;height:36px;border-radius:50%;border:1.5px solid rgba(0,0,0,0.08);background:transparent;color:var(--text-muted);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;" onmouseover="this.style.borderColor='var(--brand)';this.style.color='var(--brand)'" onmouseout="this.style.borderColor='rgba(0,0,0,0.08)';this.style.color='var(--text-muted)'"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i></button>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="padding:100px 24px;background:#ffffff;">
+  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;">
+    <div class="card-elevated reveal" style="padding:40px;">
+      <span class="section-label"><span data-lang="en">Get in Touch</span><span data-lang="es">Contáctenos</span></span>
+      <h2 style="font-family:'Playfair Display',serif;font-size:2rem;margin-bottom:8px;"><span data-lang="en">Start a Private Consultation</span><span data-lang="es">Inicie una Consulta Privada</span></h2>
+      <p style="font-size:14px;color:var(--text-muted);margin-bottom:28px;line-height:1.6;"><span data-lang="en">Fill out the form and one of our advisors will reach out within two hours.</span><span data-lang="es">Complete el formulario y uno de nuestros asesores se comunicará en menos de dos horas.</span></p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
+        <div><label style="display:block;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brand);margin-bottom:6px;"><span data-lang="en">Full Name</span><span data-lang="es">Nombre Completo</span></label><input type="text" placeholder="Jane Smith" style="width:100%;padding:12px 16px;border-radius:10px;border:1.5px solid #d1d5db;background:#ffffff;color:var(--text-heading);font-family:'Inter',sans-serif;font-size:13px;outline:none;"></div>
+        <div><label style="display:block;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brand);margin-bottom:6px;"><span data-lang="en">Phone</span><span data-lang="es">Teléfono</span></label><input type="tel" placeholder="123-456-7890" style="width:100%;padding:12px 16px;border-radius:10px;border:1.5px solid #d1d5db;background:#ffffff;color:var(--text-heading);font-family:'Inter',sans-serif;font-size:13px;outline:none;"></div>
+      </div>
+      <div style="margin-bottom:16px;"><label style="display:block;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brand);margin-bottom:6px;">Email</label><input type="email" placeholder="info@youremail.com" style="width:100%;padding:12px 16px;border-radius:10px;border:1.5px solid #d1d5db;background:#ffffff;color:var(--text-heading);font-family:'Inter',sans-serif;font-size:13px;outline:none;"></div>
+      <div style="margin-bottom:24px;"><label style="display:block;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brand);margin-bottom:6px;"><span data-lang="en">How can we help?</span><span data-lang="es">¿Cómo podemos ayudarle?</span></label><textarea rows="4" style="width:100%;padding:12px 16px;border-radius:10px;border:1.5px solid #d1d5db;background:#ffffff;color:var(--text-heading);font-family:'Inter',sans-serif;font-size:13px;outline:none;resize:none;"></textarea></div>
+      <button onclick="alert('Message sent!')" style="width:100%;padding:14px;background:var(--brand-gradient);color:#fff;border:none;border-radius:10px;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 16px rgba(0,0,0,0.15);"><i class="fa-solid fa-paper-plane"></i> <span data-lang="en">Send Message</span><span data-lang="es">Enviar Mensaje</span></button>
+    </div>
+    <div class="reveal" style="transition-delay:.2s;">
+      <span class="section-label"><span data-lang="en">Visit Us</span><span data-lang="es">Visítenos</span></span>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.6rem;margin-bottom:12px;"><span data-lang="en">Our Office</span><span data-lang="es">Nuestra Oficina</span></h3>
+      <p style="font-size:14px;color:var(--text-muted);margin-bottom:24px;line-height:1.6;"><span data-lang="en">Come see us at our headquarters.</span><span data-lang="es">Visítenos en nuestra sede principal.</span></p>
+      <div style="border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.1);margin-bottom:24px;border:1px solid rgba(0,0,0,0.08);"><iframe src="https://maps.google.com/maps?q=2690%20Weston%20Rd%20Ste%20101%20%20Weston%2C%20FL%2033331&output=embed" style="width:100%;height:300px;border:none;display:block;" allowfullscreen loading="lazy"></iframe></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div class="card-elevated" style="padding:16px 18px;display:flex;gap:12px;align-items:flex-start;"><i class="fa-solid fa-building-user" style="color:var(--brand);font-size:14px;margin-top:2px;flex-shrink:0;"></i><div><p style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brand);margin-bottom:4px;"><span data-lang="en">Address</span><span data-lang="es">Dirección</span></p><p style="font-size:12px;color:var(--text-muted);line-height:1.5;">Your Address Here</p></div></div>
+        <div class="card-elevated" style="padding:16px 18px;display:flex;gap:12px;align-items:flex-start;"><i class="fa-solid fa-envelope" style="color:var(--brand);font-size:14px;margin-top:2px;flex-shrink:0;"></i><div><p style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brand);margin-bottom:4px;">Email</p><a href="mailto:info@youremail.com" style="font-size:12px;color:var(--text-muted);text-decoration:none;word-break:break-all;">info@youremail.com</a></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:#F5F4F0;border-top:1px solid rgba(0,0,0,0.08);padding:60px 24px 32px;">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div class="footer-grid" style="margin-bottom:48px;">
+      <div>
+        <p style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--text-heading);margin-bottom:12px;">Yensi <span style="color:var(--brand);">Gonzalez</span></p>
+        <p style="font-size:13px;color:var(--text-muted);line-height:1.6;max-width:240px;"><span data-lang="en">Licensed real estate brokerage serving Weston and surrounding areas. Equal Housing Opportunity.</span><span data-lang="es">Correduría inmobiliaria autorizada que sirve a Weston y áreas circundantes. Igualdad de oportunidades en vivienda.</span></p>
+        <div style="margin-top:16px;padding:10px 14px;border-radius:10px;background:#ffffff;border:1px solid rgba(0,0,0,0.08);display:inline-flex;align-items:center;gap:10px;"><img decoding="async" src="https://webhulks.agency/wp-content/uploads/2026/05/CB-Black-e1779113551892.png" alt="Coldwell Banker" style="height:66px;width:auto;object-fit:contain;"></div><p style="font-size:10px;color:var(--text-muted);line-height:1.5;margin-top:10px;max-width:260px;">An independently owned and operated franchisee of Coldwell Banker Real Estate LLC. Equal Housing Opportunity.</p>
+      </div>
+      <div>
+        <p style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brand);margin-bottom:16px;"><span data-lang="en">Navigate</span><span data-lang="es">Navegar</span></p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
+          <li><a href="#about" style="font-size:13px;color:var(--text-muted);text-decoration:none;transition:color .2s;" onmouseover="this.style.color='var(--brand)'" onmouseout="this.style.color='var(--text-muted)'"><span data-lang="en">About</span><span data-lang="es">Nosotros</span></a></li><li><a href="#neighborhoods" style="font-size:13px;color:var(--text-muted);text-decoration:none;transition:color .2s;" onmouseover="this.style.color='var(--brand)'" onmouseout="this.style.color='var(--text-muted)'"><span data-lang="en">Neighborhoods</span><span data-lang="es">Vecindarios</span></a></li><li><a href="#properties" style="font-size:13px;color:var(--text-muted);text-decoration:none;transition:color .2s;" onmouseover="this.style.color='var(--brand)'" onmouseout="this.style.color='var(--text-muted)'"><span data-lang="en">Properties</span><span data-lang="es">Propiedades</span></a></li><li><a href="#team" style="font-size:13px;color:var(--text-muted);text-decoration:none;transition:color .2s;" onmouseover="this.style.color='var(--brand)'" onmouseout="this.style.color='var(--text-muted)'"><span data-lang="en">Team</span><span data-lang="es">Equipo</span></a></li><li><a href="#contact" style="font-size:13px;color:var(--text-muted);text-decoration:none;transition:color .2s;" onmouseover="this.style.color='var(--brand)'" onmouseout="this.style.color='var(--text-muted)'"><span data-lang="en">Contact</span><span data-lang="es">Contacto</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <p style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brand);margin-bottom:16px;">Legal</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
+          <li><a href="#" style="font-size:13px;color:var(--text-muted);text-decoration:none;"><span data-lang="en">Privacy Policy</span><span data-lang="es">Política de Privacidad</span></a></li>
+          <li><a href="#" style="font-size:13px;color:var(--text-muted);text-decoration:none;"><span data-lang="en">License Info</span><span data-lang="es">Información de Licencia</span></a></li>
+          <li><a href="#" style="font-size:13px;color:var(--text-muted);text-decoration:none;"><span data-lang="en">Disclosures</span><span data-lang="es">Divulgaciones</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <p style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brand);margin-bottom:12px;"><span data-lang="en">Stay Informed</span><span data-lang="es">Manténgase Informado</span></p>
+        <p style="font-size:13px;color:var(--text-muted);margin-bottom:16px;line-height:1.5;"><span data-lang="en">Subscribe to get off-market listings before they hit the public market.</span><span data-lang="es">Suscríbete para recibir propiedades exclusivas antes de salir al mercado.</span></p>
+        <div style="display:flex;gap:8px;"><input type="email" placeholder="your@email.com" style="flex:1;padding:10px 14px;border-radius:8px;border:1.5px solid #d1d5db;background:#ffffff;color:var(--text-heading);font-family:'Inter',sans-serif;font-size:12px;outline:none;"><button onclick="alert('Subscribed!')" style="padding:10px 16px;background:var(--brand-gradient);color:#fff;border:none;border-radius:8px;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:.08em;cursor:pointer;white-space:nowrap;"><span data-lang="en">Subscribe</span><span data-lang="es">Suscribirse</span></button></div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(0,0,0,0.08);padding-top:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+      <p style="font-size:12px;color:var(--text-muted);">© 2026 Yensi Gonzalez. <span data-lang="en">All Rights Reserved.</span><span data-lang="es">Todos los Derechos Reservados.</span></p>
+      <div style="display:flex;gap:16px;">
+        <a href="#" target="_blank" rel="noopener" style="color:var(--text-muted);font-size:14px;text-decoration:none;transition:color .2s;" onmouseover="this.style.color='var(--brand)'" onmouseout="this.style.color='var(--text-muted)'"><i class="fa-brands fa-facebook-f"></i></a><a href="#" target="_blank" rel="noopener" style="color:var(--text-muted);font-size:14px;text-decoration:none;transition:color .2s;" onmouseover="this.style.color='var(--brand)'" onmouseout="this.style.color='var(--text-muted)'"><i class="fa-brands fa-instagram"></i></a><a href="#" target="_blank" rel="noopener" style="color:var(--text-muted);font-size:14px;text-decoration:none;transition:color .2s;" onmouseover="this.style.color='var(--brand)'" onmouseout="this.style.color='var(--text-muted)'"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- AI CHAT WIDGET -->
+<div style="position:fixed;bottom:24px;right:24px;z-index:100;display:flex;flex-direction:column;align-items:flex-end;gap:12px;">
+  <div id="chat-window" style="display:none;width:320px;background:#fff;border:1px solid rgba(0,0,0,0.08);border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,0.15);overflow:hidden;flex-direction:column;">
+    <div style="padding:16px 20px;background:var(--brand-gradient);display:flex;align-items:center;justify-content:space-between;">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <div style="width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;"><i class="fa-solid fa-robot" style="color:#fff;font-size:12px;"></i></div>
+        <div><p style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:11px;color:#fff;letter-spacing:.08em;">Yensi Gonzalez AI</p><p style="font-size:10px;color:rgba(255,255,255,0.65);">AI Concierge</p></div>
+      </div>
+      <button onclick="toggleChat()" style="background:none;border:none;color:rgba(255,255,255,0.7);cursor:pointer;font-size:16px;"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div id="chat-msgs" style="padding:16px;min-height:200px;max-height:260px;overflow-y:auto;display:flex;flex-direction:column;gap:10px;">
+      <div style="padding:12px 14px;border-radius:12px;background:#f9f8f5;border:1px solid rgba(0,0,0,0.08);font-size:12px;line-height:1.6;color:var(--text-base);max-width:88%;">
+        <span data-lang="en">Hi! I am the Yensi Gonzalez AI Concierge. Ask me anything about our properties.</span>
+        <span data-lang="es">¡Hola! Soy el Concierge AI de Yensi Gonzalez. Pregúntame sobre nuestras propiedades.</span>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:4px;">
+        <button onclick="quickReply(this,'What listings do you have?','¿Qué propiedades tienen?')" style="padding:6px 12px;border-radius:20px;border:1px solid var(--brand);background:transparent;color:var(--brand);font-size:11px;font-family:'Montserrat',sans-serif;font-weight:600;cursor:pointer;" onmouseover="this.style.background='var(--brand)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--brand)'"><span data-lang="en">What listings do you have?</span><span data-lang="es">¿Qué propiedades tienen?</span></button>
+        <button onclick="quickReply(this,'What is your contact info?','¿Cuál es su contacto?')" style="padding:6px 12px;border-radius:20px;border:1px solid var(--brand);background:transparent;color:var(--brand);font-size:11px;font-family:'Montserrat',sans-serif;font-weight:600;cursor:pointer;" onmouseover="this.style.background='var(--brand)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--brand)'"><span data-lang="en">Contact info?</span><span data-lang="es">¿Información de contacto?</span></button>
+      </div>
+    </div>
+    <div style="padding:12px;border-top:1px solid rgba(0,0,0,0.08);display:flex;gap:8px;background:#fafaf8;">
+      <input id="chat-input" type="text" placeholder="Ask about our listings..." style="flex:1;padding:10px 14px;border-radius:10px;border:1.5px solid #d1d5db;background:#ffffff;color:var(--text-heading);font-family:'Inter',sans-serif;font-size:12px;outline:none;">
+      <button id="chat-send" onclick="sendChat()" style="width:36px;height:36px;border-radius:10px;background:var(--brand-gradient);border:none;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fa-solid fa-paper-plane" style="font-size:12px;"></i></button>
+    </div>
+  </div>
+  <button onclick="toggleChat()" style="width:52px;height:52px;border-radius:50%;background:var(--brand-gradient);border:none;color:#fff;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,0.25);display:flex;align-items:center;justify-content:center;font-size:20px;"><i class="fa-solid fa-comment-dots"></i></button>
+</div>
+
+<script>
+/* ---- Scroll reveal ---- */
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('active');e.target.querySelectorAll('[data-target]').forEach(runCounter);obs.unobserve(e.target);}});},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+function runCounter(el){const target=parseFloat(el.getAttribute('data-target'));const steps=60;const inc=target/steps;let cur=0;const t=setInterval(()=>{cur+=inc;if(cur>=target){el.textContent=target%1===0?target.toFixed(0):target.toFixed(1);clearInterval(t);}else{el.textContent=cur%1===0?cur.toFixed(0):cur.toFixed(1);}},30);}
+
+/* ---- Mobile menu ---- */
+function toggleMobileMenu(){const nav=document.getElementById('mobileNav');if(nav)nav.classList.toggle('show');}
+
+/* ---- Property filter ---- */
+function filterProps(btn,filter){document.querySelectorAll('[data-filter]').forEach(b=>{b.style.background='transparent';b.style.color='var(--text-muted)';b.style.borderColor='';});btn.style.background='var(--brand-gradient)';btn.style.color='#fff';btn.style.borderColor='transparent';document.querySelectorAll('[data-cat]').forEach(c=>{c.style.display=(filter==='all'||c.getAttribute('data-cat')===filter)?'block':'none';});}
+
+/* ---- Search tabs ---- */
+function setSearchTab(btn){document.querySelectorAll('.search-tab').forEach(b=>{b.style.background='rgba(255,255,255,0.08)';b.style.borderColor='rgba(255,255,255,0.2)';});btn.style.background='var(--brand-gradient)';btn.style.borderColor='var(--brand)';}
+
+/* ---- Testimonial slider ---- */
+const slides=document.querySelectorAll('.testimonial-slide');let cur=0,timer=setInterval(()=>goSlide((cur+1)%slides.length),7000);
+function goSlide(idx){clearInterval(timer);slides[cur].style.display='none';const d0=document.getElementById('t-dot-'+cur);if(d0){d0.style.width='8px';d0.style.background='rgba(0,0,0,0.08)';}cur=idx;slides[cur].style.display='block';const d1=document.getElementById('t-dot-'+cur);if(d1){d1.style.width='24px';d1.style.background='var(--brand)';}timer=setInterval(()=>goSlide((cur+1)%slides.length),7000);}
+function prevSlide(){goSlide(cur===0?slides.length-1:cur-1);}function nextSlide(){goSlide((cur+1)%slides.length);}
+
+/* ---- EN / ES Language Toggle ---- */
+let currentLang = 'en';
+
+function toggleSiteLang(){
+  currentLang = currentLang === 'en' ? 'es' : 'en';
+  document.documentElement.setAttribute('lang', currentLang);
+  const label = document.getElementById('lang-label');
+  if(label) label.textContent = currentLang === 'en' ? 'ES' : 'EN';
+  document.querySelectorAll('.lang-toggle-text').forEach(el => {
+    el.textContent = currentLang === 'en' ? 'Español' : 'English';
+  });
+}
+
+/* ---- Chat ---- */
+let chatOpen=false,chatHistory=[];
+function toggleChat(){chatOpen=!chatOpen;const w=document.getElementById('chat-window');w.style.display=chatOpen?'flex':'none';if(chatOpen)w.style.flexDirection='column';}
+function addMsg(text,isUser){const c=document.getElementById('chat-msgs');const div=document.createElement('div');div.style.cssText='padding:12px 14px;border-radius:12px;font-size:12px;line-height:1.6;max-width:88%;'+(isUser?'margin-left:auto;text-align:right;':'');div.style.background=isUser?'rgba(26,107,60,0.08)':'#f9f8f5';div.style.border='1px solid rgba(0,0,0,0.08)';div.style.color='var(--text-base)';div.innerHTML=text;c.appendChild(div);c.scrollTop=c.scrollHeight;return div;}
+function showTyping(){const c=document.getElementById('chat-msgs');const div=document.createElement('div');div.id='typing';div.style.cssText='padding:12px 14px;border-radius:12px;background:#f9f8f5;border:1px solid rgba(0,0,0,0.08);display:flex;gap:4px;align-items:center;';div.innerHTML='<span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span>';c.appendChild(div);c.scrollTop=c.scrollHeight;}
+async function sendChat(){const inp=document.getElementById('chat-input');const text=inp.value.trim();if(!text)return;inp.value='';addMsg(text,true);chatHistory.push({role:'user',content:text});showTyping();try{const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,system:'You are the AI concierge for Yensi Gonzalez, a luxury real estate brokerage in Weston. Respond in the same language the user writes in (English or Spanish). Phone: 123-456-7890. Email: info@youremail.com. Be friendly, professional, and concise.',messages:chatHistory})});const data=await res.json();document.getElementById('typing')?.remove();const reply=data.content?.map(b=>b.text||'').join('')||'Sorry, something went wrong.';addMsg(reply,false);chatHistory.push({role:'assistant',content:reply});}catch{document.getElementById('typing')?.remove();addMsg('Call us at <a href="tel:1234567890" style="color:var(--brand);">123-456-7890</a>.',false);}}
+document.getElementById('chat-input').addEventListener('keydown',e=>{if(e.key==='Enter')sendChat();});
+function quickReply(btn,textEN,textES){btn.parentElement.style.display='none';const msg=currentLang==='es'?textES:textEN;document.getElementById('chat-input').value=msg;sendChat();}
+</script>
+</body>
+</html>
